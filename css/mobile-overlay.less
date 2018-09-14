@@ -1,0 +1,23 @@
+/* ---------------------------------------------------------------------------------------
+pano - transparent overlay on mobile
+--------------------------------------------------------------------------------------- */
+.pano{
+	background:url("http://via.placeholder.com/1900x400") center center no-repeat;
+	background-size: cover;
+	padding-top:30px;
+	padding-bottom:30px;
+	
+	@media @mobile, @desktop-sm{
+		height:auto;
+		background:
+			linear-gradient(
+			    rgba(0, 0, 0, 0.5), 
+			    rgba(0, 0, 0, 0.5)
+			),
+			url("http://via.placeholder.com/1900x400") bottom center no-repeat;
+			background-size: cover;
+			padding-top:25px;
+			padding-bottom:25px;
+		.transition(.25s);
+	}	
+}

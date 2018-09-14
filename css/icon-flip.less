@@ -1,0 +1,14 @@
+/* ---------------------------------------------------------------------------------------
+Icon flip - on "a"
+---------------------------------------------------------------------------------------*/
+a{
+	&[aria-expanded=true] .icon {
+		transform: rotate(180deg);
+		transform-origin: center;
+		.transition(@transition-time);
+	}
+	&[aria-expanded=false] .icon {
+		transform-origin: center;
+		.transition(@transition-time);
+	}
+}

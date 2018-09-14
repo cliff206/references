@@ -1,0 +1,40 @@
+/* ---------------------------------------------------------------------------------------
+navbar toggle - toggle from hamburger to "x"
+--------------------------------------------------------------------------------------- */
+.navbar-toggle{
+	display: block;
+	float:left;
+	background: transparent ;
+	margin-top:0;
+	
+	&.collapsed{
+		.top-bar {
+			transform: rotate(0);
+		}
+		.middle-bar {
+			opacity: 1;
+		}
+		.bottom-bar {
+			transform: rotate(0);
+		}
+	}
+	.icon-bar {
+		width: 35px;
+		height: 5px;
+		.transition(@transition-time);
+		background:@grey;
+		
+		border-radius: 5px;
+	}
+	.top-bar {
+		transform: rotate(45deg);
+		transform-origin: 10% 10%;
+	}
+	.middle-bar {
+		opacity: 0;
+	}
+	.bottom-bar {
+		transform: rotate(-45deg);
+		transform-origin: 10% 90%;
+	}
+}

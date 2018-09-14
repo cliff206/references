@@ -1,0 +1,103 @@
+/*TYPOGRAPHY*/
+@font-family:'Open Sans', sans-serif;
+@base-font-size:16px;
+@text-scale:1.25;
+@mobile-scale:1.15;
+@light:300;
+@semibold: 600;
+@bold: 700;
+
+/*colors scheme*/
+@primary-color:#1D9BF7;
+@secondary-color:#FF970F;
+
+/*colors */
+@white: #ffffff;
+@body-bg:#ffffff;
+@off-white: #ebebeb;
+@black:#231f20;
+@grey:#959799;
+@dk-grey:#333333;
+@lt-grey:#5a5a5a;
+@red:#eb2a31;
+@navy:#003366;
+@teal:#00c2bb;
+@green: #33cc00;
+@blue: #1D9BF7;
+
+
+/*links*/
+@img-url: '../images';
+
+/*layout*/
+@row-spacing:40px;
+@spacing:20px;
+@spacing-multiply:2;
+
+/*animation*/
+@transition-time: .25s;
+
+
+// Breakpoints
+// ------------------------- Source: http://blog.scur.pl/2012/06/variable-media-queries-less-css/
+@highdensity: ~"only screen and (-webkit-min-device-pixel-ratio: 1.5)",
+				~"only screen and (min--moz-device-pixel-ratio: 1.5)",
+				~"only screen and (-o-min-device-pixel-ratio: 3/2)",
+				~"only screen and (min-device-pixel-ratio: 1.5)";
+@phone:      ~"only screen and (max-width: 425px)";
+@phablet:	  ~"only screen and (min-width: 426px) and (max-width: 767px)";	
+@desktop-sm:  ~"only screen and (min-width: 768px) and (max-width: 991px)";
+@desktop-md:  ~"only screen and (min-width: 992px) and (max-width: 1199px)";
+@desktop-lg:  ~"only screen and (min-width: 1200px)and (max-width: 1280px)";
+@desktop-xl: ~"only screen and (min-width: 1280px)";
+@desktop-wide:  ~"only screen and (min-width: 1440px)";
+
+@mobile:	 ~"only screen and (max-width: 768px)";;
+@not-mobile: ~"only screen and (min-width: 768px)";
+
+
+/*mixins*/
+.font-size(@sv) {
+	@sizeValue: unit(@sv);
+	@remValue: (@sizeValue / @base-font-size);
+	font-size: unit(@sv,px);
+	font-size: unit(@remValue,rem);
+	line-height: calc(@sv * 1.5);
+}
+
+
+
+
+.calc(@prop; @val) {
+  @{prop}: calc(~'@{val}');
+  @{prop}: -moz-calc(~'@{val}');
+  @{prop}: -webkit-calc(~'@{val}');
+  @{prop}: -o-calc(~'@{val}');
+}
+
+
+.linkColor(@color){
+	color: @color;
+	&:visited{
+		color:@color;
+	}
+	&:hover, &:focus, &:active{
+		color: darken(@color, 20%);
+		text-decoration: none;
+		.transition(@transition-time);
+	}
+	
+}
+
+.whiteLink(@color){
+	color: @color;
+	&:visited{
+		color:@color;
+	}
+	&:hover, &:focus, &:active{
+		color: darken(@color, 20%);
+		text-decoration: none;	
+	}
+	
+}
+

@@ -1,0 +1,370 @@
+/*********************************************************************************************
+Global/helper styles
+**********************************************************************************************/
+:root{
+	font-size:@base-font-size;
+	font-family: @font-family;
+}
+html{
+	font-size:@base-font-size;
+}
+body{
+	background:@body-bg;
+	font-family: @font-family;
+	color:@black;
+
+}
+@media @desktop-wide{
+	.container{
+		width:1410px;
+	}	
+}
+
+
+/*Typography*/
+
+h1, h2, h3, h4, h5, p{ 	
+	font-family: @font-family;
+	line-height: calc(1em * @text-scale );
+	/*@media @mobile{
+		line-height: @mobile-scale;
+	}*/
+}
+
+
+h1, .h1 {
+	font-size:calc(1rem * @text-scale*3 );
+	@media @mobile{
+		font-size:calc(1rem * @mobile-scale*3 );
+	}
+	
+	font-weight:700;
+}
+h2, .h2 {
+	font-size:calc(1rem * @text-scale*2.5 );
+	@media @mobile{
+		font-size:calc(1rem * @mobile-scale*2.5 );
+	}
+
+	
+	&.subheadline{
+		font-size:calc(1rem * @text-scale*2 );
+		@media @mobile{
+			font-size:calc(1rem * @mobile-scale*2 );
+		}
+		margin-top:0;
+		font-weight: 400;
+	}
+}
+h3, .h3{ 
+	font-size:calc(1rem * @text-scale*1.5 ); 
+	@media @mobile{
+		font-size:calc(1rem * @mobile-scale*1.5 ); 
+	}
+}
+h4, .h4{ 
+	font-size:calc(1rem * @text-scale*1.25 ); 
+	@media @mobile{
+		font-size:calc(1rem * @mobile-scale*1.25 ); 
+	}
+}
+h5, .h5{ 
+	font-size:calc(1rem * @text-scale*1 );
+	@media @mobile{
+		font-size:calc(1rem * @mobile-scale*1 );
+	}
+}
+p{ 
+	/*.font-size(16px);*/
+	/*font-size:@base-font-size;*/
+	font-size:1rem ;
+	
+}
+
+.disclaimer{
+	.font-size(12px);
+}
+.font-light{ font-weight: @light;}
+.font-bold { font-weight: @bold; }
+.font-semibold{font-weight: @semibold;}
+.text-shadow{
+	.text-shadow(1px 1px 1px #666);
+}
+/*Resposnive Text align-center*/
+.col-xs-center{
+	@media @mobile{
+		text-align: center;
+	}
+}
+.col-sm-center{
+	@media @desktop-sm{
+		text-align: center;
+	}
+}
+
+/* ---------------
+Colors
+------------------*/
+.blue{color:@blue;}
+.teal{color:@teal;}
+.white{color:@white;}
+
+
+
+/* -----------------
+Layout
+-------------------- */
+
+
+/*Helper classes*/
+.nopad{padding:0 !important;}
+.nomargin{margin:0;}
+
+.row{
+	&.row-spacing{
+		margin-bottom: @row-spacing;
+	}
+}
+.display-inline{
+	display: inline-block;
+	@media @mobile{
+		display: block;
+	}
+}
+
+/*spacing*/
+.clear{
+	clear:both;
+	margin-top: calc(@spacing + 10px);
+	margin-bottom: calc(@spacing + 10px);
+}
+.clear-lg{
+	clear:both;
+	margin-top: calc(@spacing *3);
+	margin-bottom: calc(@spacing *3);
+}
+
+.margin-tb{
+	margin-top: calc(@spacing);
+	margin-bottom: calc(@spacing);
+}
+
+.margin-sm-t{
+  margin-top:calc(@spacing  / 2);
+}
+.margin-sm-b{
+  margin-bottom:calc(@spacing  / 2);
+}
+.margin-sm-r{
+  margin-right:calc(@spacing  / 2);
+}
+.margin-sm-l{
+  margin-left:calc(@spacing  / 2);
+}
+
+.margin-b{
+	margin-bottom: calc(@spacing);
+}
+.margin-t{
+	margin-top:calc(@spacing);
+}
+.margin-l{
+	margin-left:calc(@spacing);
+}
+.margin-r{
+	margin-right:calc(@spacing);
+}
+
+
+
+.margin-lg-t{
+	margin-top: calc(@spacing * 3 );
+}
+
+.margin-lg-b{
+	margin-bottom: calc(@spacing * 3 );
+}
+
+.padding-t{
+	padding-top: calc(@spacing);
+}
+.padding-b{
+	padding-bottom: calc(@spacing);
+}
+.padding-r{
+	padding-right:  calc(@spacing);
+}
+.padding-l{
+	padding-left: calc(@spacing);
+}
+.padding-tb{
+	padding-top:  calc(@spacing);
+	padding-bottom: calc(@spacing);
+}
+
+.padding-section{
+	padding-top:calc(@spacing * 2);
+	padding-bottom:calc(@spacing * 2);
+}
+.padding-20{
+	padding:calc(@spacing);
+}
+
+.col-xs-wide{
+	@media @mobile{
+		width:65%;
+	}
+}
+.col-sm-wide{
+	@media @desktop-sm{
+		width:65%;
+	}
+}
+
+
+/* -----------
+Utilities
+-------------- */
+
+/*Borders*/
+.border-top{
+	border-top:1px solid #dedede;
+}
+.border-right{
+	border-right:1px solid #dedede;
+}
+.border-bottom{
+	border-bottom:1px solid #dedede;
+}
+.border-left{
+	border-left:1px solid #dedede;
+}
+
+
+/*box-shadow*/
+.box-shadow{
+	-webkit-box-shadow: 0 0 5px 1px rgba(0,0,0,.2);
+	box-shadow: 0 0 5px 1px rgba(0,0,0,.2);
+}
+
+.mobile-nofloat{
+	@media @mobile{
+		float:none !important;
+	}
+}
+
+.col-xs-center-block{
+	@media @mobile{
+		display: block;
+		margin-right: auto;
+		margin-left:auto;
+	}
+}
+
+
+/* align icon and text  */
+.icon-text-aligner {
+	/* add this class to parent element that contains icon + text elements */
+    display: flex;
+	align-items: center;
+
+  	> *:nth-child(2) {
+		margin-left: 4px;
+	}
+
+	.icon {
+		color: inherit;
+		flex-shrink: 0;
+  	}
+}
+
+
+/*viewport height*/
+.vh100{
+	height:100vh
+}
+.vh50{
+	height:50vh;
+}
+
+
+/* -----------
+cta
+-------------- */
+a{
+	.linkColor(@primary-color);
+	
+	&.cta{
+		background:@primary-color;
+		color:@white;
+		text-align: center;
+		.font-size(16px);
+		padding:.5em 1.5em;
+		.border-radius(.283em);
+		display: inline-block;
+		
+		white-space: nowrap;
+		text-decoration: none;
+
+		@media @mobile{
+			white-space: normal;
+		}
+		&:visited{
+			color:@white;
+		}
+		&:hover, &:focus, &:active{
+			background: lighten(@primary-color, 10%);
+			color:@white;
+			.transition(@transition-time);
+		}
+
+		&.secondary{
+			background:@secondary-color;
+			&:hover, &:focus, &:active{
+				background: lighten(@secondary-color, 10%);
+				color:@white;
+				.transition(@transition-time);
+			}
+
+		}
+		&.btn-sm{
+			.font-size(14px);
+
+		}
+		&.btn-lg{
+			.font-size(20px);
+		}
+
+		
+	}
+}
+/* ------------
+Backgrounds
+------------- */
+/*White bg*/
+.white-bg{
+	background:@white;
+}
+
+/* Black BG*/
+.black-bg{
+	background:@black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

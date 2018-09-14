@@ -1,0 +1,162 @@
+/*********************************************************************************************
+Components
+*****************************************************************************************/
+
+/*  --------------------------------------------------------------------------------------
+Carousel - with numbered step progress bar
+---------------------------------------------------------------------------------------*/
+
+.progressbar{
+	counter-reset: step;
+	li{
+		list-style: none;
+		width: 33.33%;
+		float:left;
+		.font-size(40px);
+		position: relative;
+		text-align: center;
+		
+		&:before{
+			content:counter(step);
+			counter-increment: step;
+			width: 50px;
+			height: 50px;
+			line-height: 45px;
+			border: 2px solid #a3a3a3;
+			display: block;
+			margin: 0 auto 10px auto;
+			border-radius: 50%;
+			
+			background-color:#a3a3a3;
+			color: @white;
+			text-align: center;
+			position:relative;
+			z-index: 1;
+			
+		}
+		&:after{
+			content: '';
+			position: absolute;
+			width:100%;
+			height: 5px;
+			background: #a3a3a3;
+			top: 25px;
+			left: -50%;
+			/*z-index: -1;*/
+		}
+		&:first-child:after{
+			content:none;
+		}
+		&.active{
+			color:#296595;
+			.transition(.25s);
+			&:before,
+			&:after{
+				border-color: #296595;
+				background: #296595;
+				color: @white;
+				.transition(.25s);
+			}
+			/*&+li:after{
+				background:#296595;
+			}*/
+		}
+	}
+}
+
+.slide-banner{
+		
+	.carousel-control{
+		/*opacity:1;*/
+		width:10%;
+		&.left,
+		&.right{
+			
+			background:none;
+
+		}
+		
+		
+		.glyphicon-chevron-left, 
+		.glyphicon-chevron-right, 
+		.icon-next,
+		.icon-prev{
+			&:hover{
+				
+
+			}
+			color:#296595;
+			.font-size(30px);
+		}
+		
+		
+	
+	}
+	.carousel-inner{
+		width:85%;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	
+	.carousel-indicators{
+		&.progressbar{
+			position: unset;
+			width: unset;
+			margin-left: 0;
+			height:50px;
+
+			li{
+				text-indent: unset;
+				margin: 0;
+				height: auto;
+				background: transparent;
+				border: none;
+				width:33.33%;
+				
+				&:first-child{
+					&:before{
+						margin:0 0 0 10px;
+					}
+					&:after{
+						content:'';
+						left:10px;
+						
+					}
+				}
+
+				&.step2{
+					&:before{
+						
+					}
+					&:after{
+						left:0;
+					}
+				}
+				&.step3{
+					&:before{
+						margin:0 10px 0 0 ;
+						float:right;
+						
+					}
+					&:after{
+						left:0;
+						width:90%;
+						
+					}
+				}
+
+			}
+			
+		}
+	}
+	.slide-content{
+		padding:5% 0;
+		& > p{
+			padding:10% 0;
+			@media @mobile, @desktop-sm{
+				padding:0;
+			}
+		}
+	}
+
+}
