@@ -581,6 +581,26 @@ pano - transparent overlay on mobile
   }
 }
 /* ---------------------------------------------------------------------------------------
+Sliding Background
+---------------------------------------------------------------------------------------*/
+.wrapper {
+  overflow: hidden;
+}
+.sliding-bg {
+  background: url("http://via.placeholder.com/1692x500") repeat-x;
+  height: 500px;
+  width: 5076px;
+  animation: slide 120s linear infinite;
+}
+@keyframes slide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1692px, 0, 0);
+  }
+}
+/* ---------------------------------------------------------------------------------------
 Video - responsive embed
 ---------------------------------------------------------------------------------------*/
 .video-container {
