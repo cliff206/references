@@ -588,9 +588,9 @@ https://css-tricks.com/creating-a-css-sliding-background-effect/
   overflow: hidden;
 }
 .sliding-bg {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("http://via.placeholder.com/1692x500") repeat-x;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/pano.png") repeat-x;
   height: 500px;
-  width: 5076px;
+  width: 4320px;
   animation: slide 120s linear infinite;
 }
 @keyframes slide {
@@ -598,7 +598,7 @@ https://css-tricks.com/creating-a-css-sliding-background-effect/
     transform: translate3d(0, 0, 0);
   }
   100% {
-    transform: translate3d(-1692px, 0, 0);
+    transform: translate3d(-1440px, 0, 0);
   }
 }
 /* ---------------------------------------------------------------------------------------
