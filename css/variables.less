@@ -100,4 +100,9 @@
 	}
 	
 }
-
+.vendor(@property, @value) {
+    -webkit-@{property}: @value;
+     -khtml-@{property}: @value;
+       -moz-@{property}: @value;
+            @{property}: @value;
+}

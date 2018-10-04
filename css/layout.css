@@ -584,14 +584,40 @@ pano - transparent overlay on mobile
 Sliding Background
 https://css-tricks.com/creating-a-css-sliding-background-effect/
 ---------------------------------------------------------------------------------------*/
-.wrapper {
+.slide-wrapper {
   overflow: hidden;
+  position: relative;
+}
+.slide-wrapper .mask-content {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.slide-wrapper .pano-content {
+  position: absolute;
+  padding: 40px;
+  width: 100%;
+  z-index: 99;
+  top: 0;
 }
 .sliding-bg {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/pano.png") repeat-x;
-  height: 500px;
-  width: 4320px;
+  background: url("../images/Foreground_City2.jpg") repeat-x;
+  height: 600px;
+  width: 4185px;
+  background-size: contain;
   animation: slide 120s linear infinite;
+}
+@media only screen and (max-width: 768px) {
+  .sliding-bg {
+    animation: none;
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../images/Foreground_City2.jpg") no-repeat;
+    background-position: top center;
+    width: auto;
+    background-size: cover;
+    padding: 40px 0;
+    height: 400px;
+    background-position: center bottom;
+  }
 }
 @keyframes slide {
   0% {
