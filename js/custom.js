@@ -152,4 +152,14 @@ jQuery(document).ready(function($){
 		}
 	});
 });
+
+//bs collapse via js
+
+	$(document).ready(function(){
+		$(".read-more").click(function(){
+	    	$(".more-content").collapse('toggle');
+		});
+
+	});
+
 	
