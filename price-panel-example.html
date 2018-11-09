@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+  
+    <link rel="stylesheet" type="text/css" href="https://www.scrypt.com/rsc/css/layout.css">    
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+  
+  
+  
+</head>
+<body>
+ 
+    
+    <style>
+
+        .annuly{
+            display: none;
+        }
+        .teal2{
+            color:#00b2a9;
+        }
+
+
+        .toggle-swap p,
+        .toggle-swap small{
+            display:inline-block;
+            color:#b1b1b1;
+        }
+        .toggle{
+            display: inline-block;
+            margin-left:15px;
+            margin-right:15px;
+            border-radius:20px;
+        }
+        .toggle-swap p.teal2,
+        .teal2 small{
+            color:#00b2a9;
+        }
+        
+        .toggle-group{
+            width:160%;
+        }
+        .toggle.off .toggle-group{
+            left:-60%;
+        }
+        .btn-default{
+            background-color:#b1b1b1;
+
+        }
+        .btn-default.active, .btn-default:active, .open>.dropdown-toggle.btn-default{
+            background-color:#b1b1b1;
+        }
+        .toggle-handle{
+            background-color:#ffffff;
+            border-radius: 28px;
+            width:28px;
+        }
+        
+        .feature-list{
+            padding:20px;
+            border-right:1px solid #ccc;
+            width:250px;
+            margin:0 auto;
+        }
+        @media only screen and (max-width: 992px) {
+            .feature-list{
+                border:none;
+            }
+        }
+        .price{
+            display: block;
+        }
+        .price .currency{
+            letter-spacing: -10px;
+            font-size:50px;
+        }
+        .price a{
+            font-size:70px;
+            color:#000000;
+        }
+        .price a:hover,
+        .price a:focus,
+        .price a:active {
+          color: #00b2a9;
+          -webkit-transition: 0.25s;
+          -moz-transition: 0.25s;
+          -o-transition: 0.25s;
+          -ms-transition: 0.25s;
+          transition: 0.25s;
+        }
+        .pay-annually a.cta-btn{
+            background:#00b2a9;
+            color:#ffffff;
+            text-transform: uppercase;
+            padding: .5em 2.5em;
+            font-weight: 600;
+
+            
+        }
+        .pay-annually a.cta-btn:hover,
+        .pay-annually a.cta-btn:focus,
+        .pay-annually a.cta-btn:active{
+            background:#007672;
+        }
+
+        .per-month{
+            font-size: 16px;
+            vertical-align: middle;
+            display: inline-block;
+        }
+
+        .per-month small{
+            font-size:12px;
+            font-weight: 700;
+            line-height: 100%
+        }
+        
+
+       /*.price .swap{
+            width: 75px;
+            display: inline-block;
+            height: 75px;
+            overflow: hidden;
+       }*/
+       
+        
+    </style>
+   
+
+    <div class="dk-grey-bg section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+                    <div class="white-bg">
+                        <div class="col-xs-12 col-sm-12 col-md-8 col-md-push-4 nopad">
+                            <h3 class="text-center font-bold">
+                                Start on our Sfax Plus Plan
+                            </h3>
+                            <div class="price ">
+                                <p class="text-center nomargin">
+                                    <a href="/sfax/sign-up/plus/" class="plus-swap">
+                                        <strong>
+                                            <sup class="currency">$</sup>
+                                            <span class="swap">
+                                                <span class="mthly">49</span>
+                                                <span class="annuly">47</span>
+                                            </span>
+                                        </strong>
+                                        <span class="per-month">
+                                            Per Month
+                                           <br>
+                                            <small>Most Popular</small>
+                                        </span>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="pay-annually">
+                               <p class="text-center">
+                                    <a href="/sfax/sign-up/plus/" target="_self" class="cta-btn  plus-swap" role="button">Start Faxing Now &raquo;</a>
+                               </p>
+                            </div>
+                            <div class="text-center toggle-swap">
+                                <p class="color-swap teal2">Monthly <br class="hidden-xs hidden-sm hidden-lg"> Billing</p>
+                                
+                                   <input id="toggle-event" type="checkbox" data-toggle="toggle" data-on="  " data-off="  " data-style="" data-onstyle="default" data-size="mini"  data-width="45" > 
+                                <p class="color-swap text-center ">
+                                    <small>Get One Month Free!</small>
+                                    <br>
+                                    Annual Billing
+                                </p>           
+                            </div>
+                            
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-4 col-md-pull-8 nopad">
+                            <div class="feature-list">
+                                <p class="text-center margin-tb">
+                                    700 Total Pages a Month
+                                    <br>
+                                    $0.10/page overage
+                                </p>
+                                <ul class=" fa-ul">
+                                    <li><i class="fa-li fa fa-check teal2"></i> Unlimited users</li>
+                                    <li><i class="fa-li fa fa-check teal2"></i> Toll-free number</li>
+                                    <li><i class="fa-li fa fa-check teal2"></i> 1 year storage</li>
+                                    <li><i class="fa-li fa fa-check teal2"></i> <b>BAA Available</b></li>
+                                    <li><i class="fa-li fa fa-check teal2"></i> <strong>No Hidden Fees</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+        
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+    
+  
+    
+    <script>
+      $(function() {
+        $('#toggle-event').change(function() {
+            const monthly = $(".swap .mthly");
+            const annually = $(".swap .annuly");
+            const colorSwap = $(".color-swap");
+            const priceWrap = $(".fl-pricing-table-column .fl-pricing-table-price")
+            const showMe = $(".fl-pricing-table-duration .swap");
+
+            $(monthly).toggle();
+            $(annually).toggle(); 
+ 
+            $(colorSwap).toggleClass("teal2");
+            $(priceWrap).toggleClass("annual-height");
+            $(showMe).toggleClass("showme");
+
+            
+
+            $(".plus-swap").attr("href", $(".plus-swap").attr('href') == '/sfax/sign-up/plus/' ? '/sfax/sign-up/plus-annual/' : '/sfax/sign-up/plus/');
+
+           
+
+            
+         
+        });
+      });
+    </script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</body>
+</html>
