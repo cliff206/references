@@ -162,7 +162,7 @@ jQuery(document).ready(function($){
 
 	});
 
-//function to pass value of one form field to another one or hidden one on submit
+//function to pass value of one form field to another one or hidden one on submit (jquery)
 $(function() {
 	$('#submit').click(function() {
 		//variable to get the value of my custom field
@@ -172,3 +172,17 @@ $(function() {
 	    $("#00N60000002JAd0").val("Desired Vanity Number:" + vanityNumber);
 	});
 });
+
+//javascript
+document.getElementById("submit").addEventListener("click", combineValue);
+			
+function combineValue(){
+	
+	const vanityNumber = document.getElementById("vanityNumber").value;
+	const customValue01 = document.getElementById("customField01").value;
+	const hiddenField = document.getElementById("00N60000002JAd0");
+
+	document.getElementById("00N60000002JAd0").value = ("Desired Vanity number: " + vanityNumber + "\n" + "Custom Field: " + customValue01);
+
+	
+};
