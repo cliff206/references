@@ -53,6 +53,11 @@ body {
     width: 1410px;
   }
 }
+@media only screen and (min-width: 1920px) {
+  .container {
+    width: 1890px;
+  }
+}
 /*Typography*/
 h1,
 h2,
@@ -1006,7 +1011,7 @@ Header
   right: 0;
   padding: 1rem;
 }
-@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 1200px)and (max-width: 1280px), only screen and (min-width: 1280px) {
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 1200px), only screen and (min-width: 1440px) {
   .header .navbar-collapse .mega-menu .mobile-subnav {
     display: block !important;
   }

@@ -14,11 +14,15 @@ body{
 	color:@black;
 
 }
-@media @desktop-wide{
-	.container{
-		width:1410px;
-	}	
+.container{
+	@media @desktop-xl{
+		width:1410px;		
+	}
+	@media  @desktop-wide{
+		width:1890px;
+	}
 }
+
 
 
 /*Typography*/
