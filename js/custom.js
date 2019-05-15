@@ -16,10 +16,30 @@ $( document ).ready(function() {
 		$('.left.carousel-control').hide();		        	            
 	}
 	
+	// returns the year (four digits)
+	const year = (new Date()).getFullYear();
+	$(".year").text(year);
 
+	//adds slimheader class to header on scroll and slides header down
+    $(function() {
+	    var header = $(".header");
+	    $(window).scroll(function() {    
+	        var scroll = $(window).scrollTop();
+	    
+	        if (scroll >= 300) {
+	            header.addClass("slimheader").css({
+	            	/*top:'0px'*/
+	            });
+	        } else {
+	            header.removeClass("slimheader").css({
+		            /*top: '-200px'*/
+		        });;
+	        }
+	    });
+	});
 
 }); //closes document.ready
-	
+ 		
 //hides left and right arrows at end of carousel, update classes to match html
 $('.carousel').on('slid.bs.carousel',checkitem);
 
